@@ -14,11 +14,11 @@ public aspect Agregar {
 
 		// Ejemplo de joinpoint estatico
 		Signature sig = thisJoinPointStaticPart.getSignature();
-		String line = "" + thisJoinPointStaticPart.getSourceLocation().getLine();
+		String linea = "" + thisJoinPointStaticPart.getSourceLocation().getLine();
 
-		String sourceName = thisJoinPointStaticPart.getSourceLocation().getWithinType().getCanonicalName();
+		String fuente = thisJoinPointStaticPart.getSourceLocation().getWithinType().getCanonicalName();
 		//
-		System.out.println("LLamado desde " + sourceName + " linea " + line + "\n   a " + sig.getDeclaringTypeName() + "."
+		System.out.println("LLamado desde " + fuente + " linea " + linea + "\n   a " + sig.getDeclaringTypeName() + "."
 				+ sig.getName() + "\n");
 	}
 
